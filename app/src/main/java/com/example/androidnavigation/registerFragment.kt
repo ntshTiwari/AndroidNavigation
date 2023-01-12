@@ -21,12 +21,12 @@ class registerFragment : Fragment() {
     ): View? {
         _fragmentRegisterBinding = FragmentRegisterBinding.inflate(layoutInflater, container, false);
 
-        fragmentRegisterBinding.btnToLogin.setOnClickListener{
+        fragmentRegisterBinding.btnLogin.setOnClickListener{
             /// this is how we move to a fragment using NavController
             findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
 
-        fragmentRegisterBinding.btnToMain.setOnClickListener{
+        fragmentRegisterBinding.btnSignUp.setOnClickListener{
             /// this is how we move to a fragment using NavController
             findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
         }
