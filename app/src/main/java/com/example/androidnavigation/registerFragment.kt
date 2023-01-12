@@ -8,21 +8,25 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import com.example.androidnavigation.databinding.FragmentRegisterBinding
 
 class registerFragment : Fragment() {
+
+    private var _fragmentRegisterBinding: FragmentRegisterBinding? = null
+    private val fragmentRegisterBinding get() = _fragmentRegisterBinding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val registerFragmentView = inflater.inflate(R.layout.fragment_register, container, false)
+        _fragmentRegisterBinding = FragmentRegisterBinding.inflate(layoutInflater, container, false);
 
-        registerFragmentView.findViewById<Button>(R.id.btn_to_login).setOnClickListener{
+        fragmentRegisterBinding.btnToLogin.setOnClickListener{
             /// this is how we move to a fragment using NavController
             findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
 
-        registerFragmentView.findViewById<Button>(R.id.btn_to_main).setOnClickListener{
+        fragmentRegisterBinding.btnToMain.setOnClickListener{
             /// this is how we move to a fragment using NavController
             findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
         }
@@ -35,6 +39,11 @@ class registerFragment : Fragment() {
 //            findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
 //        }
 
-        return registerFragmentView
+        return fragmentRegisterBinding.root
+    }
+
+    override fun onDestroyView() {
+        _fragmentRegisterBinding = null
+        super.onDestroyView()
     }
 }
