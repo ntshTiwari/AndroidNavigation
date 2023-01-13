@@ -27,8 +27,11 @@ class registerFragment : Fragment() {
         }
 
         fragmentRegisterBinding.btnSignUp.setOnClickListener{
+            val mainFragmentAction = registerFragmentDirections.actionRegisterFragmentToMainFragment(
+                fragmentRegisterBinding.txtEmail.text.toString(), fragmentRegisterBinding.txtPassword.text.toString(),
+            )
             /// this is how we move to a fragment using NavController
-            findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
+            findNavController().navigate(mainFragmentAction)
         }
 
         /// NOTE: What happens when we call something not mentioned in navigation graph

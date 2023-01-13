@@ -38,7 +38,8 @@
             android:id="@+id/action_registerFragment_to_mainFragment"
             app:destination="@id/mainFragment"
             app:popUpTo="@id/registerFragment"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="true" >
+        </action>
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
@@ -48,6 +49,12 @@
         <action
             android:id="@+id/action_mainFragment_to_noteFragment"
             app:destination="@id/noteFragment" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/noteFragment"
