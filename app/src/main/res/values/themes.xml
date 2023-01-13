@@ -14,10 +14,11 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowActionBar">false</item>
+<!--    As we are using the drawer here with the action bar, so we need to have the action bar in place and its properties-->
+    <style name="NoActionBar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+<!--        <item name="android:windowNoTitle">true</item>-->
+<!--        <item name="android:windowActionBar">false</item>-->
         <item name="android:windowFullscreen">true</item>
-        <item name="android:windowContentOverlay">@null</item>
+<!--        <item name="android:windowContentOverlay">@null</item>-->
     </style>
 </resources>

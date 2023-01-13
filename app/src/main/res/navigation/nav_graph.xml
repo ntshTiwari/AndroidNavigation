@@ -51,10 +51,12 @@
             app:destination="@id/noteFragment" />
         <argument
             android:name="username"
-            app:argType="string" />
+            app:argType="string"
+            android:defaultValue="this is a default username value"/>
         <argument
             android:name="password"
-            app:argType="string" />
+            app:argType="string"
+            android:defaultValue="this is a password value"/>
     </fragment>
     <fragment
         android:id="@+id/noteFragment"

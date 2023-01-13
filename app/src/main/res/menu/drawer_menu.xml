@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    Adding android:checkableBehavior="single" highlights the current selected item-->
+    <group android:checkableBehavior="single">
+<!--        we mention exact ids of fragments as mentioned in our nav graph-->
+        <item android:title="Login Screen" android:id="@id/loginFragment"/>
+        <item android:title="Register Screen" android:id="@id/registerFragment"/>
+        <item android:title="Main Screen" android:id="@id/mainFragment"/>
+        <item android:title="Note Screen" android:id="@id/noteFragment"/>
+    </group>
+</menu>
