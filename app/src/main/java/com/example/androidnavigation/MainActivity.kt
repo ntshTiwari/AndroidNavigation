@@ -3,6 +3,8 @@ package com.example.androidnavigation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavHost
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -17,7 +19,11 @@ class MainActivity : AppCompatActivity() {
         /// Step 2: get the navController
         val navController = (supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHost).navController
 
-        /// Attach the navController to the bottomNavigationView using the setupWithNavController function
+        /// Step 3: Attach the navController to the bottomNavigationView using the setupWithNavController function
         bottomNavigationView.setupWithNavController(navController)
+
+        /// Optional Step 4: If we want to update the ActionBar with change in bottom navigation
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.firstFragment, R.id.secondFragment, R.id.thirdFragment))
+        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 }
