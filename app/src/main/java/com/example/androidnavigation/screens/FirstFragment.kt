@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.viewpager2.widget.ViewPager2
 import com.example.androidnavigation.R
 
 class FirstFragment : Fragment() {
@@ -13,6 +15,17 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first, container, false)
+        val view = inflater.inflate(R.layout.fragment_first, container, false)
+
+        /// Get the viewPager associated with this activity
+        val viewPager2 = activity?.findViewById<ViewPager2>(R.id.view_pager)
+
+        view.findViewById<TextView>(R.id.first_fragment_next).setOnClickListener {
+            /// we are assigning the new item number when next is pressed
+//            viewPager2?.currentItem = 1
+            viewPager2?.currentItem = viewPager2?.currentItem?.inc()!!
+        }
+
+        return view
     }
 }
