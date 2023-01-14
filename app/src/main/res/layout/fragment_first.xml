@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".screens.FirstFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Fragment 1" />
+        android:textSize="32dp"
+        android:text="Home" />
 
-</FrameLayout>
+    <View
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:background="@drawable/ic_home"/>
+
+<!--    Blank space-->
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="32dp"
+        android:layout_gravity="right"
+        android:textColor="@color/purple_500"
+        android:textSize="32dp"
+        android:text="Next" />
+
+</LinearLayout>
