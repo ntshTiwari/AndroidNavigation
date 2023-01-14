@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Step 1: We create different animations based on our need/requirements-->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    This means that the screen will come from left (invisible) to center (visible)-->
+    <translate android:fromXDelta="-100%" android:toXDelta="0%" android:duration="300" />
+</set>

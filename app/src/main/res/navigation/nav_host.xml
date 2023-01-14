@@ -10,12 +10,22 @@
         android:name="com.example.androidnavigation.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
+<!--        Step 2: We use different created animations in our actions-->
+<!--        Reference video: https://www.youtube.com/watch?v=lejBUeOSnf8&list=PLSrm9z4zp4mHilvsfUM3jeCYFV3fTAS3J&index=6&ab_channel=Stevdza-San-->
         <action
             android:id="@+id/action_homeFragment_to_leftFragment"
-            app:destination="@id/leftFragment" />
+            app:destination="@id/leftFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
         <action
             android:id="@+id/action_homeFragment_to_rightFragment"
-            app:destination="@id/rightFragment" />
+            app:destination="@id/rightFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/leftFragment"
@@ -24,7 +34,9 @@
         tools:layout="@layout/fragment_left" >
         <action
             android:id="@+id/action_leftFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
     </fragment>
     <fragment
         android:id="@+id/rightFragment"
@@ -33,6 +45,8 @@
         tools:layout="@layout/fragment_right" >
         <action
             android:id="@+id/action_rightFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
     </fragment>
 </navigation>
