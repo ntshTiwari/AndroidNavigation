@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:title="Drawer Screen 1" android:id="@+id/drawerScreen1"/>
     <item android:title="Drawer Screen 2" android:id="@+id/drawerScreen2"/>
-    <item android:title="Drawer Screen 3" android:id="@+id/drawerScreen3"/>
+    <item android:title="@null" android:id="@+id/drawerScreen3" app:actionLayout="@layout/drawer_item_custom_view"/>
+<!--    If we want to enable app:actionLayout, then we have to pass title as @null-->
 </menu>
