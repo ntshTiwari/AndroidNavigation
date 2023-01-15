@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Bottom Nav Screen 1" android:id="@+id/bottomNavScreen1"/>
+    <item android:title="Bottom Nav Screen 2" android:id="@+id/bottomNavScreen2"/>
+    <item android:title="Bottom Nav Screen 3" android:id="@+id/bottomNavScreen3"/>
+</menu>

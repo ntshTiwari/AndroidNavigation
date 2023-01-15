@@ -9,7 +9,8 @@
         android:id="@+id/drawerScreen1"
         android:name="com.example.androidnavigation.screens.drawer_components.DrawerScreen1"
         android:label="fragment_drawer_screen1"
-        tools:layout="@layout/fragment_drawer_screen1" />
+        tools:layout="@layout/fragment_drawer_screen1" >
+    </fragment>
     <fragment
         android:id="@+id/drawerScreen2"
         android:name="com.example.androidnavigation.screens.drawer_components.DrawerScreen2"
