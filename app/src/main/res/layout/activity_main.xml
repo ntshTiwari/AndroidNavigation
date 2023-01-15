@@ -14,10 +14,14 @@
         layout="@layout/drawer_main_body"
         />
 
+<!--    We use the app:headerLayout property to pass the header
+        and the app:menu property to pass the menu
+-->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/drawer_nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        app:headerLayout="@layout/drawer_header"
         app:menu="@menu/drawer_menu"
         android:layout_gravity="start"/>
 
